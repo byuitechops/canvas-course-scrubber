@@ -2,7 +2,7 @@
   "name": "canvas-course-scrubber",
   "version": "1.0.0",
   "description": "Deletes a canvas course's content, allowing the ID to be preserved.",
-  "main": "courseScrubber.js",
+  "main": "main.js",
   "scripts": {
     "start": "node ./node_modules/child-development-kit/runChild.js",
     "test": "tap ./node_modules/child-development-kit/testChild.js -T"
