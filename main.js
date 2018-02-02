@@ -36,11 +36,11 @@ var scrubCourse = (course, stepCallback) => {
 
     asyncLib.waterfall(scrubbers, (err) => {
         if (err) {
-            stepCallback(err);
+            stepCallback(err, course);
             return;
         }
         /* Take us back up when were done */
-        stepCallback(null);
+        stepCallback(null, course);
     });
 };
 
