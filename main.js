@@ -13,8 +13,6 @@ const scrubGroups = require('./course_scrubber_modules/scrubGroups.js');
 
 var scrubCourse = (course, stepCallback) => {
 
-    course.info.prototypeOU = course.info.canvasOU;
-
     /* If there isn't an ID provided for a prototype course, there's nothing to scrub */
     if (!course.info.prototypeOU) {
         course.message('No Prototype ID provided. Scrubbing the course is not necessary.');
