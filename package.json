@@ -1,0 +1,28 @@
+{
+  "name": "canvas-course-scrubber",
+  "version": "1.0.0",
+  "description": "Deletes a canvas course's content, allowing the ID to be preserved.",
+  "main": "courseScrubber.js",
+  "scripts": {
+    "start": "node ./node_modules/child-development-kit/runChild.js",
+    "test": "tap ./node_modules/child-development-kit/testChild.js -T"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byuitechops/canvas-course-scrubber.git"
+  },
+  "author": "Zachary Williams and Daniel Green",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byuitechops/canvas-course-scrubber/issues"
+  },
+  "homepage": "https://github.com/byuitechops/canvas-course-scrubber#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "canvas-wrapper": "github:byuitechops/canvas-wrapper"
+  },
+  "childType": "postImport",
+  "devDependencies": {
+    "child-development-kit": "github:byuitechops/child-development-kit"
+  }
+}
