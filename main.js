@@ -9,6 +9,7 @@ const scrubFolders = require('./course_scrubber_modules/scrubFolders.js');
 const scrubAssignments = require('./course_scrubber_modules/scrubAssignments.js');
 const scrubModules = require('./course_scrubber_modules/scrubModules.js');
 const scrubGroups = require('./course_scrubber_modules/scrubGroups.js');
+const scrubSyllabus = require('./course_scrubber_modules/scrubSyllabus.js');
 
 
 var scrubCourse = (course, stepCallback) => {
@@ -29,7 +30,8 @@ var scrubCourse = (course, stepCallback) => {
         scrubFolders,
         scrubAssignments,
         scrubModules,
-        scrubGroups
+        scrubGroups,
+        scrubSyllabus
     ];
 
     asyncLib.waterfall(scrubbers, (err) => {
@@ -51,5 +53,6 @@ module.exports = {
     scrubPages: scrubPages,
     scrubQuizzes: scrubQuizzes,
     scrubModules: scrubModules,
-    scrubGroups: scrubGroups
+    scrubGroups: scrubGroups,
+    scrubSyllabus: scrubSyllabus
 };
