@@ -27,7 +27,7 @@ module.exports = (course, stepCallback) => {
     }
 
     /* Get the pages so we can delete them */
-    canvas.get(`/api/v1/courses/${course.info.prototypeOU}/folders`, (err, folders) => {
+    canvas.get(`/api/v1/courses/${course.info.canvasOU}/folders`, (err, folders) => {
         if (err) {
             course.error(err);
             stepCallback(null, course);

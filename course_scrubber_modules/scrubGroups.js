@@ -23,7 +23,7 @@ module.exports = (course, stepCallback) => {
     }
 
     /* Get the pages so we can delete them */
-    canvas.get(`/api/v1/courses/${course.info.prototypeOU}/groups`, (err, groups) => {
+    canvas.get(`/api/v1/courses/${course.info.canvasOU}/groups`, (err, groups) => {
         if (err) {
             course.error(err);
             stepCallback(null, course);

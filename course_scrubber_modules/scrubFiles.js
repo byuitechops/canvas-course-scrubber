@@ -23,7 +23,7 @@ module.exports = (course, stepCallback) => {
     }
 
     /* Get the pages so we can delete them */
-    canvas.getFiles(course.info.prototypeOU, (err, files) => {
+    canvas.getFiles(course.info.canvasOU, (err, files) => {
         if (err) {
             course.error(err);
             stepCallback(null, course);

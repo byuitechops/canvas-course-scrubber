@@ -6,7 +6,7 @@ const asyncLib = require('async');
 module.exports = (course, stepCallback) => {
 
     function deleteAssignment(assignment, eachCallback) {
-        canvas.delete(`/api/v1/courses/${course.info.prototypeOU}/assignments/${assignment.id}`, (delErr) => {
+        canvas.delete(`/api/v1/courses/${course.info.canvasOU}/assignments/${assignment.id}`, (delErr) => {
             if (delErr) {
                 course.error(delErr);
                 eachCallback(null);
@@ -23,7 +23,7 @@ module.exports = (course, stepCallback) => {
     }
 
     /* Get the pages so we can delete them */
-    canvas.getAssignments(course.info.prototypeOU, (err, assignments) => {
+    canvas.getAssignments(course.info.canvasOU, (err, assignments) => {
         if (err) {
             course.error(err);
             stepCallback(null, course);

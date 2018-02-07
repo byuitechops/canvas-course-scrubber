@@ -8,7 +8,7 @@ module.exports = (course, stepCallback) => {
         'syllabus_body': ''
     };
 
-    canvas.put(`/api/v1/courses/${course.info.prototypeOU}`, putObj, (err, newCourse) => {
+    canvas.put(`/api/v1/courses/${course.info.canvasOU}`, putObj, (err, newCourse) => {
         if (err) {
             course.error(err);
             return;

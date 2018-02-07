@@ -7,7 +7,7 @@ module.exports = (course, stepCallback) => {
 
     function deleteModule(module, eachCallback) {
 
-        canvas.delete(`/api/v1/courses/${course.info.prototypeOU}/modules/${module.id}`, (delErr) => {
+        canvas.delete(`/api/v1/courses/${course.info.canvasOU}/modules/${module.id}`, (delErr) => {
             if (delErr) {
                 course.error(delErr);
                 eachCallback(null);
@@ -24,7 +24,7 @@ module.exports = (course, stepCallback) => {
     }
 
     /* Get the pages so we can delete them */
-    canvas.getModules(course.info.prototypeOU, (err, modules) => {
+    canvas.getModules(course.info.canvasOU, (err, modules) => {
         if (err) {
             course.error(err);
             stepCallback(null, course);

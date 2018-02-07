@@ -6,7 +6,7 @@ const asyncLib = require('async');
 module.exports = (course, stepCallback) => {
 
     function deleteTopic(discussion_topic, eachCallback) {
-        canvas.delete(`/api/v1/courses/${course.info.prototypeOU}/discussion_topics/${discussion_topic.id}`, (delErr) => {
+        canvas.delete(`/api/v1/courses/${course.info.canvasOU}/discussion_topics/${discussion_topic.id}`, (delErr) => {
             if (delErr) {
                 course.error(delErr);
                 eachCallback(null);
@@ -23,7 +23,7 @@ module.exports = (course, stepCallback) => {
     }
 
     /* Get the topics so we can delete them */
-    canvas.getDiscussions(course.info.prototypeOU, (err, topics) => {
+    canvas.getDiscussions(course.info.canvasOU, (err, topics) => {
         if (err) {
             course.error(err);
             stepCallback(null, course);
