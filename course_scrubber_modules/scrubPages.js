@@ -6,6 +6,11 @@ const asyncLib = require('async');
 module.exports = (course, stepCallback) => {
 
     function deletePage(page, eachCallback) {
+        if (page.front_page == true) {
+            eachCallback(null);
+            return;
+        }
+
         canvas.delete(`/api/v1/courses/${course.info.canvasOU}/pages/${page.page_id}`, (delErr) => {
             if (delErr) {
                 course.error(delErr);
