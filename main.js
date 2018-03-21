@@ -15,7 +15,7 @@ const scrubSyllabus = require('./course_scrubber_modules/scrubSyllabus.js');
 var scrubCourse = (course, stepCallback) => {
 
     /* If there isn't an ID provided for a prototype course, there's nothing to scrub */
-    if (!course.info.canvasOU) {
+    if (!course.info.prototypeOU) {
         course.message('No Prototype ID provided. Scrubbing the course is not necessary.');
         stepCallback(null, course);
         return;
