@@ -12,14 +12,14 @@
     "url": "git+https://github.com/byuitechops/canvas-course-scrubber.git"
   },
   "author": "Zachary Williams and Daniel Green",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/byuitechops/canvas-course-scrubber/issues"
   },
   "homepage": "https://github.com/byuitechops/canvas-course-scrubber#readme",
   "dependencies": {
     "async": "^2.6.0",
-    "canvas-wrapper": "git+https://github.com/byuitechops/canvas-wrapper.git"
+    "canvas-wrapper": "github:byuitechops/canvas-wrapper"
   },
   "childType": "postImport",
   "devDependencies": {
