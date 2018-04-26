@@ -22,7 +22,5 @@
     "canvas-wrapper": "github:byuitechops/canvas-wrapper"
   },
   "childType": "postImport",
-  "devDependencies": {
-    "child-development-kit": "github:byuitechops/child-development-kit"
-  }
+  "devDependencies": {}
 }
